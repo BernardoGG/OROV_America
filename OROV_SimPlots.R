@@ -120,196 +120,196 @@ length(C8_wndws)
 L1_dist <- sapply(L1_wndws, dist.dna)
 x <- length(L1_wndws)
 L1_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L1_dist
 )
 L2_dist <- sapply(L2_wndws, dist.dna)
 x <- length(L2_wndws)
 L2_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L2_dist
 )
 L3_dist <- sapply(L3_wndws, dist.dna)
 x <- length(L3_wndws)
 L3_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L3_dist
 )
 L4_dist <- sapply(L4_wndws, dist.dna)
 x <- length(L4_wndws)
 L4_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L4_dist
 )
 L5_dist <- sapply(L5_wndws, dist.dna)
 x <- length(L5_wndws)
 L5_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L5_dist
 )
 L6_dist <- sapply(L6_wndws, dist.dna)
 x <- length(L6_wndws)
 L6_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L6_dist
 )
 L7_dist <- sapply(L7_wndws, dist.dna)
 x <- length(L7_wndws)
 L7_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L7_dist
 )
 L8_dist <- sapply(L8_wndws, dist.dna)
 x <- length(L8_wndws)
 L8_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = L8_dist
 )
 
 G1a_dist <- sapply(G1a_wndws, dist.dna)
 x <- length(G1a_wndws)
 G1a_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G1a_dist
 )
 G1b_dist <- sapply(G1b_wndws, dist.dna)
 x <- length(G1b_wndws)
 G1b_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G1b_dist
 )
 G1c_dist <- sapply(G1c_wndws, dist.dna)
 x <- length(G1c_wndws)
 G1c_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G1c_dist
 )
 G1d_dist <- sapply(G1d_wndws, dist.dna)
 x <- length(G1d_wndws)
 G1d_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G1d_dist
 )
 G2a_dist <- sapply(G2a_wndws, dist.dna)
 x <- length(G2a_wndws)
 G2a_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G2a_dist
 )
 G2b_dist <- sapply(G2b_wndws, dist.dna)
 x <- length(G2b_wndws)
 G2b_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G2b_dist
 )
 G2c_dist <- sapply(G2c_wndws, dist.dna)
 x <- length(G2c_wndws)
 G2c_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G2c_dist
 )
 G2d_dist <- sapply(G2d_wndws, dist.dna)
 x <- length(G2d_wndws)
 G2d_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = G2d_dist
 )
 
 S1_dist <- sapply(S1_wndws, dist.dna)
 x <- length(S1_wndws)
 S1_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S1_dist
 )
 S2_dist <- sapply(S2_wndws, dist.dna)
 x <- length(S2_wndws)
 S2_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S2_dist
 )
 S3_dist <- sapply(S3_wndws, dist.dna)
 x <- length(S3_wndws)
 S3_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S3_dist
 )
 S4_dist <- sapply(S4_wndws, dist.dna)
 x <- length(S4_wndws)
 S4_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S4_dist
 )
 S5_dist <- sapply(S5_wndws, dist.dna)
 x <- length(S5_wndws)
 S5_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S5_dist
 )
 S6_dist <- sapply(S6_wndws, dist.dna)
 x <- length(S6_wndws)
 S6_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S6_dist
 )
 S7_dist <- sapply(S7_wndws, dist.dna)
 x <- length(S7_wndws)
 S7_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S7_dist
 )
 S8_dist <- sapply(S8_wndws, dist.dna)
 x <- length(S8_wndws)
 S8_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = S8_dist
 )
 
 C1_dist <- sapply(C1_wndws, dist.dna)
 x <- length(C1_wndws)
 C1_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C1_dist
 )
 C2_dist <- sapply(C2_wndws, dist.dna)
 x <- length(C2_wndws)
 C2_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C2_dist
 )
 C3_dist <- sapply(C3_wndws, dist.dna)
 x <- length(C3_wndws)
 C3_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C3_dist
 )
 C4_dist <- sapply(C4_wndws, dist.dna)
 x <- length(C4_wndws)
 C4_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C4_dist
 )
 C5_dist <- sapply(C5_wndws, dist.dna)
 x <- length(C5_wndws)
 C5_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C5_dist
 )
 C6_dist <- sapply(C6_wndws, dist.dna)
 x <- length(C6_wndws)
 C6_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C6_dist
 )
 C7_dist <- sapply(C7_wndws, dist.dna)
 x <- length(C7_wndws)
 C7_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C7_dist
 )
 C8_dist <- sapply(C8_wndws, dist.dna)
 x <- length(C8_wndws)
 C8_dist <- data.frame(
-  Window = c(1:x),
+  Window = c(seq(20, 20*x, by = 20)),
   Dist = C8_dist
 )
 
