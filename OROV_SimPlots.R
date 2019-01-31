@@ -315,53 +315,53 @@ C8_dist <- data.frame(
 
 #Plot genetic distances for each segment
 ggplot() +
-  geom_line(data = L1_dist, aes(x = Window, y = Dist), color = "red") +
-  geom_line(data = L2_dist, aes(x = Window, y = Dist), color = "blue") +
-  geom_line(data = L3_dist, aes(x = Window, y = Dist), color = "yellow") +
-  geom_line(data = L4_dist, aes(x = Window, y = Dist), color = "purple") +
-  geom_line(data = L5_dist, aes(x = Window, y = Dist), color = "orange") +
-  geom_line(data = L6_dist, aes(x = Window, y = Dist), color = "green") +
-  geom_line(data = L7_dist, aes(x = Window, y = Dist), color = "cyan") +
-  geom_line(data = L8_dist, aes(x = Window, y = Dist), color = "orchid") +
+  geom_line(data = L1_dist, aes(x = Window, y = Dist), color = "olivedrab") +
+  geom_line(data = L2_dist, aes(x = Window, y = Dist), color = "olivedrab4") +
+  geom_line(data = L3_dist, aes(x = Window, y = Dist), color = "olivedrab3") +
+  geom_line(data = L4_dist, aes(x = Window, y = Dist), color = "olivedrab2") +
+  geom_line(data = L5_dist, aes(x = Window, y = Dist), color = "palegreen4") +
+  geom_line(data = L6_dist, aes(x = Window, y = Dist), color = "palegreen3") +
+  geom_line(data = L7_dist, aes(x = Window, y = Dist), color = "palegreen2") +
+  geom_line(data = L8_dist, aes(x = Window, y = Dist), color = "palegreen1") +
   ylim(0:1) +
   xlab("L") +
   ylab("Distance to IQTV")
 
 ggplot() +
-  geom_line(data = G1a_dist, aes(x = Window, y = Dist), color = "red") +
-  geom_line(data = G1b_dist, aes(x = Window, y = Dist), color = "blue") +
-  geom_line(data = G1c_dist, aes(x = Window, y = Dist), color = "yellow") +
-  geom_line(data = G1d_dist, aes(x = Window, y = Dist), color = "purple") +
-  geom_line(data = G2a_dist, aes(x = Window, y = Dist), color = "orange") +
-  geom_line(data = G2b_dist, aes(x = Window, y = Dist), color = "green") +
-  geom_line(data = G2c_dist, aes(x = Window, y = Dist), color = "cyan") +
-  geom_line(data = G2d_dist, aes(x = Window, y = Dist), color = "orchid") +
+  geom_line(data = G1a_dist, aes(x = Window, y = Dist), color = "royalblue4") +
+  geom_line(data = G1b_dist, aes(x = Window, y = Dist), color = "royalblue3") +
+  geom_line(data = G1c_dist, aes(x = Window, y = Dist), color = "royalblue") +
+  geom_line(data = G1d_dist, aes(x = Window, y = Dist), color = "royalblue1") +
+  geom_line(data = G2a_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G2b_dist, aes(x = Window, y = Dist), color = "firebrick") +
+  geom_line(data = G2c_dist, aes(x = Window, y = Dist), color = "firebrick3") +
+  geom_line(data = G2d_dist, aes(x = Window, y = Dist), color = "firebrick1") +
   ylim(0:1) +
   xlab("M") +
   ylab("Distance to IQTV")
 
 ggplot() +
-  geom_line(data = S1_dist, aes(x = Window, y = Dist), color = "red") +
-  geom_line(data = S2_dist, aes(x = Window, y = Dist), color = "blue") +
-  geom_line(data = S3_dist, aes(x = Window, y = Dist), color = "yellow") +
-  geom_line(data = S4_dist, aes(x = Window, y = Dist), color = "purple") +
-  geom_line(data = S5_dist, aes(x = Window, y = Dist), color = "orange") +
-  geom_line(data = S6_dist, aes(x = Window, y = Dist), color = "green") +
-  geom_line(data = S7_dist, aes(x = Window, y = Dist), color = "cyan") +
-  geom_line(data = S8_dist, aes(x = Window, y = Dist), color = "orchid") +
+  geom_line(data = S1_dist, aes(x = Window, y = Dist), color = "goldenrod4") +
+  geom_line(data = S2_dist, aes(x = Window, y = Dist), color = "goldenrod3") +
+  geom_line(data = S3_dist, aes(x = Window, y = Dist), color = "goldenrod2") +
+  geom_line(data = S4_dist, aes(x = Window, y = Dist), color = "goldenrod1") +
+  geom_line(data = S5_dist, aes(x = Window, y = Dist), color = "lightgoldenrod4") +
+  geom_line(data = S6_dist, aes(x = Window, y = Dist), color = "lightgoldenrod3") +
+  geom_line(data = S7_dist, aes(x = Window, y = Dist), color = "lightgoldenrod2") +
+  geom_line(data = S8_dist, aes(x = Window, y = Dist), color = "lightgoldenrod1") +
   ylim(0:1) +
   xlab("S") +
   ylab("Distance to IQTV")
 
 ggplot() +
-  geom_line(data = C1_dist, aes(x = Window, y = Dist), color = "red") +
-  geom_line(data = C2_dist, aes(x = Window, y = Dist), color = "blue") +
-  geom_line(data = C3_dist, aes(x = Window, y = Dist), color = "yellow") +
-  geom_line(data = C4_dist, aes(x = Window, y = Dist), color = "purple") +
-  geom_line(data = C5_dist, aes(x = Window, y = Dist), color = "orange") +
-  geom_line(data = C6_dist, aes(x = Window, y = Dist), color = "green") +
-  geom_line(data = C7_dist, aes(x = Window, y = Dist), color = "cyan") +
-  geom_line(data = C8_dist, aes(x = Window, y = Dist), color = "orchid") +
+  geom_line(data = C1_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = C2_dist, aes(x = Window, y = Dist), color = "dodgerblue4") +
+  geom_line(data = C3_dist, aes(x = Window, y = Dist), color = "gold") +
+  geom_line(data = C4_dist, aes(x = Window, y = Dist), color = "darkorchid4") +
+  geom_line(data = C5_dist, aes(x = Window, y = Dist), color = "darkorange2") +
+  geom_line(data = C6_dist, aes(x = Window, y = Dist), color = "olivedrab") +
+  geom_line(data = C7_dist, aes(x = Window, y = Dist), color = "palegreen3") +
+  geom_line(data = C8_dist, aes(x = Window, y = Dist), color = "orchid4") +
   ylim(0:1) +
   xlab("Concatenated genome (ORFs)") +
   ylab("Distance to IQTV")
