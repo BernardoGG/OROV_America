@@ -323,7 +323,7 @@ ggplot() +
   geom_line(data = L6_dist, aes(x = Window, y = Dist), color = "palegreen3") +
   geom_line(data = L7_dist, aes(x = Window, y = Dist), color = "palegreen2") +
   geom_line(data = L8_dist, aes(x = Window, y = Dist), color = "palegreen1") +
-  ylim(0:1) +
+  ylim(0, 0.7) +
   xlab("L") +
   ylab("Distance to IQTV")
 
@@ -336,7 +336,7 @@ ggplot() +
   geom_line(data = G2b_dist, aes(x = Window, y = Dist), color = "firebrick") +
   geom_line(data = G2c_dist, aes(x = Window, y = Dist), color = "firebrick3") +
   geom_line(data = G2d_dist, aes(x = Window, y = Dist), color = "firebrick1") +
-  ylim(0:1) +
+  ylim(0, 0.7) +
   xlab("M") +
   ylab("Distance to IQTV")
 
@@ -349,7 +349,7 @@ ggplot() +
   geom_line(data = S6_dist, aes(x = Window, y = Dist), color = "lightgoldenrod3") +
   geom_line(data = S7_dist, aes(x = Window, y = Dist), color = "lightgoldenrod2") +
   geom_line(data = S8_dist, aes(x = Window, y = Dist), color = "lightgoldenrod1") +
-  ylim(0:1) +
+  ylim(0, 0.7) +
   xlab("S") +
   ylab("Distance to IQTV")
 
@@ -362,6 +362,6 @@ ggplot() +
   geom_line(data = C6_dist, aes(x = Window, y = Dist), color = "olivedrab") +
   geom_line(data = C7_dist, aes(x = Window, y = Dist), color = "palegreen3") +
   geom_line(data = C8_dist, aes(x = Window, y = Dist), color = "orchid4") +
-  ylim(0:1) +
+  ylim(0, 0.7) +
   xlab("Concatenated genome (ORFs)") +
   ylab("Distance to IQTV")
