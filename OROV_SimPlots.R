@@ -365,3 +365,139 @@ ggplot() +
   ylim(0, 0.7) +
   xlab("Concatenated genome (ORFs)") +
   ylab("Distance to IQTV")
+
+#Repeat analyses by comparing the M segment with pseudo-outgroup sequences
+#within each clade
+#G1 outgroup: Trinidad 1955, G2 outgroup: Panama 1989
+#Read sequences
+G1INa.seqs <- fasta2DNAbin('OROV_M_G1_BRA1960.fasta')
+G1INb.seqs <- fasta2DNAbin('OROV_M_G1_BRA2009.fasta')
+G1INc.seqs <- fasta2DNAbin('OROV_M_G1_PAN1999.fasta')
+G1OUTa.seqs <- fasta2DNAbin('OROV_M_G1_BRA1960out.fasta')
+G1OUTb.seqs <- fasta2DNAbin('OROV_M_G1_BRA2009out.fasta')
+G1OUTc.seqs <- fasta2DNAbin('OROV_M_G1_PAN1999out.fasta')
+
+G2INa.seqs <- fasta2DNAbin('OROV_M_G2_ECU2016.fasta')
+G2INb.seqs <- fasta2DNAbin('OROV_M_G2_PER2008.fasta')
+G2INc.seqs <- fasta2DNAbin('OROV_M_G2_PER2000.fasta')
+G2OUTa.seqs <- fasta2DNAbin('OROV_M_G2_ECU2016out.fasta')
+G2OUTb.seqs <- fasta2DNAbin('OROV_M_G2_PER2008out.fasta')
+G2OUTc.seqs <- fasta2DNAbin('OROV_M_G2_PER2000out.fasta')
+
+#Set sliding windows on alignments to estimate genetic distances
+G1INa_wndws <- slidingWindow(G1INa.seqs, width = round(length(G1INa.seqs)*0.07), interval = 20)
+length(G1INa_wndws)
+G1INb_wndws <- slidingWindow(G1INb.seqs, width = round(length(G1INb.seqs)*0.07), interval = 20)
+length(G1INb_wndws)
+G1INc_wndws <- slidingWindow(G1INc.seqs, width = round(length(G1INc.seqs)*0.07), interval = 20)
+length(G1INc_wndws)
+G1OUTa_wndws <- slidingWindow(G1OUTa.seqs, width = round(length(G1OUTa.seqs)*0.07), interval = 20)
+length(G1OUTa_wndws)
+G1OUTb_wndws <- slidingWindow(G1OUTb.seqs, width = round(length(G1OUTb.seqs)*0.07), interval = 20)
+length(G1OUTb_wndws)
+G1OUTc_wndws <- slidingWindow(G1OUTc.seqs, width = round(length(G1OUTc.seqs)*0.07), interval = 20)
+length(G1OUTc_wndws)
+G2INa_wndws <- slidingWindow(G2INa.seqs, width = round(length(G2INa.seqs)*0.07), interval = 20)
+length(G2INa_wndws)
+G2INb_wndws <- slidingWindow(G2INb.seqs, width = round(length(G2INb.seqs)*0.07), interval = 20)
+length(G2INb_wndws)
+G2INc_wndws <- slidingWindow(G2INc.seqs, width = round(length(G2INc.seqs)*0.07), interval = 20)
+length(G2INc_wndws)
+G2OUTa_wndws <- slidingWindow(G2OUTa.seqs, width = round(length(G2OUTa.seqs)*0.07), interval = 20)
+length(G2OUTa_wndws)
+G2OUTb_wndws <- slidingWindow(G2OUTb.seqs, width = round(length(G2OUTb.seqs)*0.07), interval = 20)
+length(G2OUTb_wndws)
+G2OUTc_wndws <- slidingWindow(G2OUTc.seqs, width = round(length(G2OUTc.seqs)*0.07), interval = 20)
+length(G2OUTc_wndws)
+
+#Estimate mean genetic distance per window
+G1INa_dist <- sapply(G1INa_wndws, dist.dna)
+x <- length(G1INa_wndws)
+G1INa_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1INa_dist
+)
+G1INb_dist <- sapply(G1INb_wndws, dist.dna)
+x <- length(G1INb_wndws)
+G1INb_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1INb_dist
+)
+G1INc_dist <- sapply(G1INc_wndws, dist.dna)
+x <- length(G1INc_wndws)
+G1INc_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1INc_dist
+)
+G1OUTa_dist <- sapply(G1OUTa_wndws, dist.dna)
+x <- length(G1OUTa_wndws)
+G1OUTa_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1OUTa_dist
+)
+G1OUTb_dist <- sapply(G1OUTb_wndws, dist.dna)
+x <- length(G1OUTb_wndws)
+G1OUTb_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1OUTb_dist
+)
+G1OUTc_dist <- sapply(G1OUTc_wndws, dist.dna)
+x <- length(G1OUTc_wndws)
+G1OUTc_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G1OUTc_dist
+)
+G2INa_dist <- sapply(G2INa_wndws, dist.dna)
+x <- length(G2INa_wndws)
+G2INa_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2INa_dist
+)
+G2INb_dist <- sapply(G2INb_wndws, dist.dna)
+x <- length(G2INb_wndws)
+G2INb_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2INb_dist
+)
+G2INc_dist <- sapply(G2INc_wndws, dist.dna)
+x <- length(G2INc_wndws)
+G2INc_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2INc_dist
+)
+G2OUTa_dist <- sapply(G2OUTa_wndws, dist.dna)
+x <- length(G2OUTa_wndws)
+G2OUTa_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2OUTa_dist
+)
+G2OUTb_dist <- sapply(G2OUTb_wndws, dist.dna)
+x <- length(G2OUTb_wndws)
+G2OUTb_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2OUTb_dist
+)
+G2OUTc_dist <- sapply(G2OUTc_wndws, dist.dna)
+x <- length(G2OUTc_wndws)
+G2OUTc_dist <- data.frame(
+  Window = c(seq(20, 20*x, by = 20)),
+  Dist = G2OUTc_dist
+)
+
+#SimPlots
+ggplot() +
+  geom_line(data = G1INa_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1INb_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1INc_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1OUTa_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1OUTb_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1OUTc_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G2INa_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2INb_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2INc_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2OUTa_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2OUTb_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2OUTc_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  ylim(0, 0.3) +
+  xlab("M") +
+  ylab("Distance to basal group")
