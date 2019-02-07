@@ -486,18 +486,62 @@ G2OUTc_dist <- data.frame(
 
 #SimPlots
 ggplot() +
-  geom_line(data = G1INa_dist, aes(x = Window, y = Dist), color = "darkred") +
-  geom_line(data = G1INb_dist, aes(x = Window, y = Dist), color = "darkred") +
-  geom_line(data = G1INc_dist, aes(x = Window, y = Dist), color = "darkred") +
+  geom_line(data = G1INa_dist, aes(x = Window, y = Dist), color = "red") +
+  geom_line(data = G1INb_dist, aes(x = Window, y = Dist), color = "red") +
+  geom_line(data = G1INc_dist, aes(x = Window, y = Dist), color = "red") +
   geom_line(data = G1OUTa_dist, aes(x = Window, y = Dist), color = "darkred") +
   geom_line(data = G1OUTb_dist, aes(x = Window, y = Dist), color = "darkred") +
   geom_line(data = G1OUTc_dist, aes(x = Window, y = Dist), color = "darkred") +
-  geom_line(data = G2INa_dist, aes(x = Window, y = Dist), color = "midnightblue") +
-  geom_line(data = G2INb_dist, aes(x = Window, y = Dist), color = "midnightblue") +
-  geom_line(data = G2INc_dist, aes(x = Window, y = Dist), color = "midnightblue") +
+  geom_line(data = G2INa_dist, aes(x = Window, y = Dist), color = "blue") +
+  geom_line(data = G2INb_dist, aes(x = Window, y = Dist), color = "blue") +
+  geom_line(data = G2INc_dist, aes(x = Window, y = Dist), color = "blue") +
   geom_line(data = G2OUTa_dist, aes(x = Window, y = Dist), color = "midnightblue") +
   geom_line(data = G2OUTb_dist, aes(x = Window, y = Dist), color = "midnightblue") +
   geom_line(data = G2OUTc_dist, aes(x = Window, y = Dist), color = "midnightblue") +
   ylim(0, 0.3) +
   xlab("M") +
   ylab("Distance to basal group")
+
+#Estimate mean relative genetic distances from each genotype to IQTV outgroup
+G1_dist <- apply(cbind(G1a_dist$Dist,G1b_dist$Dist,G1c_dist$Dist),
+                 1, mean)
+G1_dist <- data.frame(Window = G1a_dist$Window,
+                      Dist = G1_dist)
+G2_dist <- apply(cbind(G2a_dist$Dist,G2b_dist$Dist,G2c_dist$Dist),
+                 1, mean)
+G2_dist <- data.frame(Window = G2a_dist$Window,
+                      Dist = G2_dist)
+
+Ref1 <- data.frame(
+  Window = G1_dist$Window,
+  Dist = G1_dist$Dist/(G1_dist$Dist+G2_dist$Dist)
+)
+
+Ref2 <- data.frame(
+  Window = G2_dist$Window,
+  Dist = G2_dist$Dist/(G1_dist$Dist+G2_dist$Dist)
+)
+
+ggplot() +
+  geom_line(data = Ref1, aes(x = Ref1$Window, y = Ref1$Dist),color = "royalblue4") +
+  geom_line(data = Ref2, aes(x = Ref2$Window, y = Ref2$Dist),color = "darkred") +
+  ylim(0.45, 0.55) +
+  xlab("M") +
+  ylab("Relative distance to IQTV")
+
+#Find breakpoints
+Break1 <- data.frame(
+  Window = Ref1$Window,
+  Dist = Ref2$Dist-Ref1$Dist
+)
+Break2 <- data.frame(
+  Window = Break1$Window,
+  Dist = Break1$Dist+abs(Break1$Dist)
+)
+
+SrcGen <- data.frame(
+  Window.Start.Site = Break2$Window-20,
+  Window.End.Site = (Break2$Window-20)+602,
+  Lineage = ifelse(Break2$Dist > 0, "LineageA", "LineageB")
+)
+SrcGen
