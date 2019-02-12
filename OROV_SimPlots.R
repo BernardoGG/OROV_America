@@ -38,83 +38,57 @@ S6.seqs <- fasta2DNAbin('OROV_v_IQTV_S_PAN1989.fasta')
 S7.seqs <- fasta2DNAbin('OROV_v_IQTV_S_PER2000.fasta')
 S8.seqs <- fasta2DNAbin('OROV_v_IQTV_S_PER2008.fasta')
 
-C1.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_BRA1960.fasta')
-C2.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_BRA2000.fasta')
-C3.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_BRA2009.fasta')
-C4.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_PAN1999.fasta')
-C5.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_ECU2016.fasta')
-C6.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_PAN1989.fasta')
-C7.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_PER2000.fasta')
-C8.seqs <- fasta2DNAbin('OROV_v_IQTV_Concat_PER2008.fasta')
-
 #Set sliding windows on alignments to estimate genetic distances
-L1_wndws <- slidingWindow(L1.seqs, width = round(length(L1.seqs)*0.07), interval = 20)
+L1_wndws <- slidingWindow(L1.seqs, width = round((length(L1.seqs)/2)*0.07), interval = 20)
 length(L1_wndws)
-L2_wndws <- slidingWindow(L2.seqs, width = round(length(L2.seqs)*0.07), interval = 20)
+L2_wndws <- slidingWindow(L2.seqs, width = round((length(L2.seqs)/2)*0.07), interval = 20)
 length(L2_wndws)
-L3_wndws <- slidingWindow(L3.seqs, width = round(length(L3.seqs)*0.07), interval = 20)
+L3_wndws <- slidingWindow(L3.seqs, width = round((length(L3.seqs)/2)*0.07), interval = 20)
 length(L3_wndws)
-L4_wndws <- slidingWindow(L4.seqs, width = round(length(L4.seqs)*0.07), interval = 20)
+L4_wndws <- slidingWindow(L4.seqs, width = round((length(L4.seqs)/2)*0.07), interval = 20)
 length(L4_wndws)
-L5_wndws <- slidingWindow(L5.seqs, width = round(length(L5.seqs)*0.07), interval = 20)
+L5_wndws <- slidingWindow(L5.seqs, width = round((length(L5.seqs)/2)*0.07), interval = 20)
 length(L5_wndws)
-L6_wndws <- slidingWindow(L6.seqs, width = round(length(L6.seqs)*0.07), interval = 20)
+L6_wndws <- slidingWindow(L6.seqs, width = round((length(L6.seqs)/2)*0.07), interval = 20)
 length(L6_wndws)
-L7_wndws <- slidingWindow(L7.seqs, width = round(length(L7.seqs)*0.07), interval = 20)
+L7_wndws <- slidingWindow(L7.seqs, width = round((length(L7.seqs)/2)*0.07), interval = 20)
 length(L7_wndws)
-L8_wndws <- slidingWindow(L8.seqs, width = round(length(L8.seqs)*0.07), interval = 20)
+L8_wndws <- slidingWindow(L8.seqs, width = round((length(L8.seqs)/2)*0.07), interval = 20)
 length(L8_wndws)
 
-G1a_wndws <- slidingWindow(G1a.seqs, width = round(length(G1a.seqs)*0.07), interval = 20)
+G1a_wndws <- slidingWindow(G1a.seqs, width = round((length(G1a.seqs)/2)*0.07), interval = 20)
 length(G1a_wndws)
-G1b_wndws <- slidingWindow(G1b.seqs, width = round(length(G1b.seqs)*0.07), interval = 20)
+G1b_wndws <- slidingWindow(G1b.seqs, width = round((length(G1b.seqs)/2)*0.07), interval = 20)
 length(G1b_wndws)
-G1c_wndws <- slidingWindow(G1c.seqs, width = round(length(G1c.seqs)*0.07), interval = 20)
+G1c_wndws <- slidingWindow(G1c.seqs, width = round((length(G1c.seqs)/2)*0.07), interval = 20)
 length(G1c_wndws)
-G1d_wndws <- slidingWindow(G1d.seqs, width = round(length(G1d.seqs)*0.07), interval = 20)
+G1d_wndws <- slidingWindow(G1d.seqs, width = round((length(G1d.seqs)/2)*0.07), interval = 20)
 length(G1d_wndws)
-G2a_wndws <- slidingWindow(G2a.seqs, width = round(length(G2a.seqs)*0.07), interval = 20)
+G2a_wndws <- slidingWindow(G2a.seqs, width = round((length(G2a.seqs)/2)*0.07), interval = 20)
 length(G2a_wndws)
-G2b_wndws <- slidingWindow(G2b.seqs, width = round(length(G2b.seqs)*0.07), interval = 20)
+G2b_wndws <- slidingWindow(G2b.seqs, width = round((length(G2b.seqs)/2)*0.07), interval = 20)
 length(G2b_wndws)
-G2c_wndws <- slidingWindow(G2c.seqs, width = round(length(G2c.seqs)*0.07), interval = 20)
+G2c_wndws <- slidingWindow(G2c.seqs, width = round((length(G2c.seqs)/2)*0.07), interval = 20)
 length(G2c_wndws)
-G2d_wndws <- slidingWindow(G2d.seqs, width = round(length(G2d.seqs)*0.07), interval = 20)
+G2d_wndws <- slidingWindow(G2d.seqs, width = round((length(G2d.seqs)/2)*0.07), interval = 20)
 length(G2d_wndws)
 
-S1_wndws <- slidingWindow(S1.seqs, width = round(length(S1.seqs)*0.07), interval = 20)
+S1_wndws <- slidingWindow(S1.seqs, width = round((length(S1.seqs)/2)*0.07), interval = 20)
 length(S1_wndws)
-S2_wndws <- slidingWindow(S2.seqs, width = round(length(S2.seqs)*0.07), interval = 20)
+S2_wndws <- slidingWindow(S2.seqs, width = round((length(S2.seqs)/2)*0.07), interval = 20)
 length(S2_wndws)
-S3_wndws <- slidingWindow(S3.seqs, width = round(length(S3.seqs)*0.07), interval = 20)
+S3_wndws <- slidingWindow(S3.seqs, width = round((length(S3.seqs)/2)*0.07), interval = 20)
 length(S3_wndws)
-S4_wndws <- slidingWindow(S4.seqs, width = round(length(S4.seqs)*0.07), interval = 20)
+S4_wndws <- slidingWindow(S4.seqs, width = round((length(S4.seqs)/2)*0.07), interval = 20)
 length(S4_wndws)
-S5_wndws <- slidingWindow(S5.seqs, width = round(length(S5.seqs)*0.07), interval = 20)
+S5_wndws <- slidingWindow(S5.seqs, width = round((length(S5.seqs)/2)*0.07), interval = 20)
 length(S5_wndws)
-S6_wndws <- slidingWindow(S6.seqs, width = round(length(S6.seqs)*0.07), interval = 20)
+S6_wndws <- slidingWindow(S6.seqs, width = round((length(S6.seqs)/2)*0.07), interval = 20)
 length(S6_wndws)
-S7_wndws <- slidingWindow(S7.seqs, width = round(length(S7.seqs)*0.07), interval = 20)
+S7_wndws <- slidingWindow(S7.seqs, width = round((length(S7.seqs)/2)*0.07), interval = 20)
 length(S7_wndws)
-S8_wndws <- slidingWindow(S8.seqs, width = round(length(S8.seqs)*0.07), interval = 20)
+S8_wndws <- slidingWindow(S8.seqs, width = round((length(S8.seqs)/2)*0.07), interval = 20)
 length(S8_wndws)
-
-C1_wndws <- slidingWindow(C1.seqs, width = 600, interval = 20)
-length(C1_wndws)
-C2_wndws <- slidingWindow(C2.seqs, width = 600, interval = 20)
-length(C2_wndws)
-C3_wndws <- slidingWindow(C3.seqs, width = 600, interval = 20)
-length(C3_wndws)
-C4_wndws <- slidingWindow(C4.seqs, width = 600, interval = 20)
-length(C4_wndws)
-C5_wndws <- slidingWindow(C5.seqs, width = 600, interval = 20)
-length(C5_wndws)
-C6_wndws <- slidingWindow(C6.seqs, width = 600, interval = 20)
-length(C6_wndws)
-C7_wndws <- slidingWindow(C7.seqs, width = 600, interval = 20)
-length(C7_wndws)
-C8_wndws <- slidingWindow(C8.seqs, width = 600, interval = 20)
-length(C8_wndws)
 
 #Estimate mean genetic distance per window
 L1_dist <- sapply(L1_wndws, dist.dna)
@@ -264,55 +238,6 @@ S8_dist <- data.frame(
   Dist = S8_dist
 )
 
-C1_dist <- sapply(C1_wndws, dist.dna)
-x <- length(C1_wndws)
-C1_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C1_dist
-)
-C2_dist <- sapply(C2_wndws, dist.dna)
-x <- length(C2_wndws)
-C2_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C2_dist
-)
-C3_dist <- sapply(C3_wndws, dist.dna)
-x <- length(C3_wndws)
-C3_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C3_dist
-)
-C4_dist <- sapply(C4_wndws, dist.dna)
-x <- length(C4_wndws)
-C4_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C4_dist
-)
-C5_dist <- sapply(C5_wndws, dist.dna)
-x <- length(C5_wndws)
-C5_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C5_dist
-)
-C6_dist <- sapply(C6_wndws, dist.dna)
-x <- length(C6_wndws)
-C6_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C6_dist
-)
-C7_dist <- sapply(C7_wndws, dist.dna)
-x <- length(C7_wndws)
-C7_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C7_dist
-)
-C8_dist <- sapply(C8_wndws, dist.dna)
-x <- length(C8_wndws)
-C8_dist <- data.frame(
-  Window = c(seq(20, 20*x, by = 20)),
-  Dist = C8_dist
-)
-
 #Plot genetic distances for each segment
 ggplot() +
   geom_line(data = L1_dist, aes(x = Window, y = Dist), color = "olivedrab") +
@@ -353,19 +278,6 @@ ggplot() +
   xlab("S") +
   ylab("Distance to IQTV")
 
-ggplot() +
-  geom_line(data = C1_dist, aes(x = Window, y = Dist), color = "darkred") +
-  geom_line(data = C2_dist, aes(x = Window, y = Dist), color = "dodgerblue4") +
-  geom_line(data = C3_dist, aes(x = Window, y = Dist), color = "gold") +
-  geom_line(data = C4_dist, aes(x = Window, y = Dist), color = "darkorchid4") +
-  geom_line(data = C5_dist, aes(x = Window, y = Dist), color = "darkorange2") +
-  geom_line(data = C6_dist, aes(x = Window, y = Dist), color = "olivedrab") +
-  geom_line(data = C7_dist, aes(x = Window, y = Dist), color = "palegreen3") +
-  geom_line(data = C8_dist, aes(x = Window, y = Dist), color = "orchid4") +
-  ylim(0, 0.7) +
-  xlab("Concatenated genome (ORFs)") +
-  ylab("Distance to IQTV")
-
 #Repeat analyses by comparing the M segment with pseudo-outgroup sequences
 #within each clade
 #G1 outgroup: Trinidad 1955, G2 outgroup: Panama 1989
@@ -385,29 +297,29 @@ G2OUTb.seqs <- fasta2DNAbin('OROV_M_G2_PER2008out.fasta')
 G2OUTc.seqs <- fasta2DNAbin('OROV_M_G2_PER2000out.fasta')
 
 #Set sliding windows on alignments to estimate genetic distances
-G1INa_wndws <- slidingWindow(G1INa.seqs, width = round(length(G1INa.seqs)*0.07), interval = 20)
+G1INa_wndws <- slidingWindow(G1INa.seqs, width = round((length(G1INa.seqs)/2)*0.07), interval = 20)
 length(G1INa_wndws)
-G1INb_wndws <- slidingWindow(G1INb.seqs, width = round(length(G1INb.seqs)*0.07), interval = 20)
+G1INb_wndws <- slidingWindow(G1INb.seqs, width = round((length(G1INb.seqs)/2)*0.07), interval = 20)
 length(G1INb_wndws)
-G1INc_wndws <- slidingWindow(G1INc.seqs, width = round(length(G1INc.seqs)*0.07), interval = 20)
+G1INc_wndws <- slidingWindow(G1INc.seqs, width = round((length(G1INc.seqs)/2)*0.07), interval = 20)
 length(G1INc_wndws)
-G1OUTa_wndws <- slidingWindow(G1OUTa.seqs, width = round(length(G1OUTa.seqs)*0.07), interval = 20)
+G1OUTa_wndws <- slidingWindow(G1OUTa.seqs, width = round((length(G1OUTa.seqs)/2)*0.07), interval = 20)
 length(G1OUTa_wndws)
-G1OUTb_wndws <- slidingWindow(G1OUTb.seqs, width = round(length(G1OUTb.seqs)*0.07), interval = 20)
+G1OUTb_wndws <- slidingWindow(G1OUTb.seqs, width = round((length(G1OUTb.seqs)/2)*0.07), interval = 20)
 length(G1OUTb_wndws)
-G1OUTc_wndws <- slidingWindow(G1OUTc.seqs, width = round(length(G1OUTc.seqs)*0.07), interval = 20)
+G1OUTc_wndws <- slidingWindow(G1OUTc.seqs, width = round((length(G1OUTc.seqs)/2)*0.07), interval = 20)
 length(G1OUTc_wndws)
-G2INa_wndws <- slidingWindow(G2INa.seqs, width = round(length(G2INa.seqs)*0.07), interval = 20)
+G2INa_wndws <- slidingWindow(G2INa.seqs, width = round((length(G2INa.seqs)/2)*0.07), interval = 20)
 length(G2INa_wndws)
-G2INb_wndws <- slidingWindow(G2INb.seqs, width = round(length(G2INb.seqs)*0.07), interval = 20)
+G2INb_wndws <- slidingWindow(G2INb.seqs, width = round((length(G2INb.seqs)/2)*0.07), interval = 20)
 length(G2INb_wndws)
-G2INc_wndws <- slidingWindow(G2INc.seqs, width = round(length(G2INc.seqs)*0.07), interval = 20)
+G2INc_wndws <- slidingWindow(G2INc.seqs, width = round((length(G2INc.seqs)/2)*0.07), interval = 20)
 length(G2INc_wndws)
-G2OUTa_wndws <- slidingWindow(G2OUTa.seqs, width = round(length(G2OUTa.seqs)*0.07), interval = 20)
+G2OUTa_wndws <- slidingWindow(G2OUTa.seqs, width = round((length(G2OUTa.seqs)/2)*0.07), interval = 20)
 length(G2OUTa_wndws)
-G2OUTb_wndws <- slidingWindow(G2OUTb.seqs, width = round(length(G2OUTb.seqs)*0.07), interval = 20)
+G2OUTb_wndws <- slidingWindow(G2OUTb.seqs, width = round((length(G2OUTb.seqs)/2)*0.07), interval = 20)
 length(G2OUTb_wndws)
-G2OUTc_wndws <- slidingWindow(G2OUTc.seqs, width = round(length(G2OUTc.seqs)*0.07), interval = 20)
+G2OUTc_wndws <- slidingWindow(G2OUTc.seqs, width = round((length(G2OUTc.seqs)/2)*0.07), interval = 20)
 length(G2OUTc_wndws)
 
 #Estimate mean genetic distance per window
@@ -525,7 +437,7 @@ Ref2 <- data.frame(
 ggplot() +
   geom_line(data = Ref1, aes(x = Ref1$Window, y = Ref1$Dist),color = "royalblue4") +
   geom_line(data = Ref2, aes(x = Ref2$Window, y = Ref2$Dist),color = "darkred") +
-  ylim(0.45, 0.55) +
+  ylim(0.4, 0.6) +
   xlab("M") +
   ylab("Relative distance to IQTV")
 
