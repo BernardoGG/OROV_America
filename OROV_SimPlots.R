@@ -425,12 +425,12 @@ G2_dist <- data.frame(Window = G2a_dist$Window,
                       Dist = G2_dist)
 
 Ref1 <- data.frame(
-  Window = G1_dist$Window,
+  Window = G1_dist$Window/3,
   Dist = G1_dist$Dist/(G1_dist$Dist+G2_dist$Dist)
 )
 
 Ref2 <- data.frame(
-  Window = G2_dist$Window,
+  Window = G2_dist$Window/3,
   Dist = G2_dist$Dist/(G1_dist$Dist+G2_dist$Dist)
 )
 
