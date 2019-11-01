@@ -1,0 +1,1 @@
+This folder contains XML files for individual BEAST runs for the three OROV genome segments. Names can contain information about the tree prior, clock model and chain length. Multiple chains were run and combined for some of the study results.
